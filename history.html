@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch Sử Đặt - JW Marriott Hotel Hanoi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/history.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" href="images/download.png">
+</head>
+<body>
+<div class="jw-chrome"><header class="dark-header">
+<div class="top-nav"><div class="header-logo"><a href="index.html"><img class="logo" alt="JW Marriott" src="images/header-logo.png"></a></div>
+<button class="menu-toggle" aria-label="Menu">&#9776;</button>
+<nav class="main-menu"><a href="index.html">Tổng quan</a><a href="rooms.html">Phòng</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ & Tiện ích</a><a href="history.html" class="active">Lịch sử đặt</a><a class="menu-cta" href="rooms.html">Đặt phòng ngay</a></nav></div>
+<div class="sub-header"><div class="hotel-title-group"><h2>JW MARRIOTT HOTEL HANOI</h2>
+<div class="rating"><span class="stars" role="img" aria-label="4,6 trên 5 sao">★★★★<span class="half">★</span></span><span class="review-count">4.6 • 1112 Đánh giá</span></div></div>
+<div class="contact-links"><a href="index.html#ban-do"><i class="fa-solid fa-location-dot"></i> XEM BẢN ĐỒ</a><a href="tel:+842438335588"><i class="fa-solid fa-phone"></i> HOTLINE: +84 24 3833 5588</a></div></div>
+</header></div>
+<main class="history-page">
+    <section class="history-hero">
+      <div class="history-hero__overlay"></div>
+      <div class="history-hero__content">
+        <span class="history-hero__subtitle">DÀNH CHO QUÝ KHÁCH</span>
+        <h1 class="history-hero__title">Lịch Sử Đặt</h1>
+        <p class="history-hero__desc">Các đơn đặt phòng và đặt bàn nhà hàng được lưu trên thiết bị này</p>
+      </div>
+    </section>
+
+    <section class="history-container">
+      <div class="history-stats">
+        <div class="stat"><span class="stat__num" id="statTotal">0</span><span class="stat__label">Tổng số đơn</span></div>
+        <div class="stat"><span class="stat__num" id="statActive">0</span><span class="stat__label">Đang hiệu lực</span></div>
+        <div class="stat"><span class="stat__num" id="statCancelled">0</span><span class="stat__label">Đã huỷ</span></div>
+        <div class="stat"><span class="stat__num" id="statSpent">0</span><span class="stat__label">Tổng chi tiêu (USD)</span></div>
+      </div>
+
+      <div class="history-toolbar">
+        <div class="history-tabs" role="tablist">
+          <button type="button" class="tab active" data-filter="all">Tất cả</button>
+          <button type="button" class="tab" data-filter="room">Đặt phòng</button>
+          <button type="button" class="tab" data-filter="table">Đặt bàn</button>
+          <button type="button" class="tab" data-filter="cancelled">Đã huỷ</button>
+        </div>
+        <label class="history-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="historySearch" placeholder="Tìm theo mã đặt, tên, email…">
+        </label>
+      </div>
+
+      <div id="historyList" class="history-list"></div>
+
+      <div id="historyEmpty" class="history-empty" hidden>
+        <i class="fa-regular fa-calendar-xmark"></i>
+        <h3 id="historyEmptyTitle">Quý khách chưa có đơn đặt nào</h3>
+        <p id="historyEmptyText">Hãy chọn phòng nghỉ hoặc đặt bàn tại nhà hàng để bắt đầu.</p>
+        <div class="history-empty__actions">
+          <a href="rooms.html" class="btn-dark">Đặt phòng</a>
+          <a href="cuisine.html" class="btn-light">Đặt bàn nhà hàng</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="cancelModal" class="confirm-modal" hidden>
+      <div class="confirm-modal__box" role="dialog" aria-modal="true" aria-labelledby="cancelTitle">
+        <h3 id="cancelTitle">Huỷ đơn đặt?</h3>
+        <p>Quý khách có chắc muốn huỷ đơn <strong id="cancelCode"></strong>? Thao tác này không thể hoàn tác.</p>
+        <div class="confirm-modal__actions">
+          <button type="button" class="btn-light" id="cancelNo">Giữ đơn</button>
+          <button type="button" class="btn-danger" id="cancelYes">Huỷ đơn</button>
+        </div>
+      </div>
+    </div>
+  </main>
+<div class="jw-chrome"><footer class="main-dark-footer">
+<div class="footer-hotel-info"><h2>JW MARRIOTT® HOTEL HANOI</h2><div class="info-grid">
+<div class="links-col"><a href="index.html">Tổng quan</a><a href="rooms.html">Phòng</a><a href="room-detail.html?id=deluxe-king">Phòng Deluxe King</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ &amp; Tiện ích</a><a href="offers.html">Ưu đãi</a></div>
+<div class="links-col"><a href="rooms.html">Đặt phòng ngay</a><a href="history.html">Lịch sử đặt</a><a href="index.html#ban-do">Bản đồ &amp; cách di chuyển</a></div>
+<div class="address-col"><p>SỐ 8 ĐƯỜNG ĐỖ ĐỨC DỤC, PHƯỜNG MỄ TRÌ, QUẬN NAM TỪ LIÊM, HÀ NỘI, VIỆT NAM</p><p>HOTLINE: <a href="tel:+842438335588" style="color:inherit">+84 24 3833 5588</a></p></div></div></div>
+<div class="footer-accordions">
+<div class="acc-item"><button class="acc-head" type="button"><span>Dành cho khách</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="rooms.html">Đặt phòng</a><a href="history.html">Lịch sử đặt</a><a href="cuisine.html">Đặt bàn nhà hàng</a><a href="services.html">Dịch vụ &amp; Tiện ích</a></div></div>
+<div class="acc-item"><button class="acc-head" type="button"><span>Công ty của chúng tôi</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="index.html">Về JW Marriott Hotel Hanoi</a><a href="https://www.marriott.com" target="_blank" rel="noopener">Marriott International</a></div></div></div>
+<div class="footer-copyright"><p>© 2026 JW Marriott Hotel Hanoi — Website mô phỏng phục vụ bài tập lớn, không phải trang chính thức của Marriott International.</p></div>
+</footer></div>
+<script src="js/site.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>

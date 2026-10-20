@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/download.png" />
+    <title>Đặt Phòng Thành Công - JW Marriott Hotel Hanoi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/success.css" />
+  <link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" href="images/download.png">
+</head>
+  <body>
+<div class="jw-chrome"><header class="dark-header">
+<div class="top-nav"><div class="header-logo"><a href="index.html"><img class="logo" alt="JW Marriott" src="images/header-logo.png"></a></div>
+<button class="menu-toggle" aria-label="Menu">&#9776;</button>
+<nav class="main-menu"><a href="index.html">Tổng quan</a><a href="rooms.html" class="active">Phòng</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ & Tiện ích</a><a href="history.html">Lịch sử đặt</a><a class="menu-cta" href="rooms.html">Đặt phòng ngay</a></nav></div>
+<div class="sub-header"><div class="hotel-title-group"><h2>JW MARRIOTT HOTEL HANOI</h2>
+<div class="rating"><span class="stars" role="img" aria-label="4,6 trên 5 sao">★★★★<span class="half">★</span></span><span class="review-count">4.6 • 1112 Đánh giá</span></div></div>
+<div class="contact-links"><a href="index.html#ban-do"><i class="fa-solid fa-location-dot"></i> XEM BẢN ĐỒ</a><a href="tel:+842438335588"><i class="fa-solid fa-phone"></i> HOTLINE: +84 24 3833 5588</a></div></div>
+</header></div>
+<main class="success-container">
+      <div class="success-card">
+        <div class="success-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h2 class="success-title">Đặt Phòng Thành Công!</h2>
+        <p class="success-subtitle">
+          Cảm ơn bạn đã lựa chọn khách sạn của chúng tôi. Thông tin đặt phòng
+          của bạn đã được lưu.
+        </p>
+
+        <div class="booking-details-box">
+          <div class="details-header">
+            <h3>Thông Tin Đặt Phòng</h3>
+            <span class="booking-code" id="bookingCode">Mã đặt phòng: —</span>
+          </div>
+          <div class="details-body">
+            <div class="detail-row">
+              <span class="label">Khách hàng:</span>
+              <span class="value" id="guestName">—</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Email nhận xác nhận:</span>
+              <span class="value" id="guestEmail">—</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Số điện thoại:</span>
+              <span class="value" id="guestPhone">—</span>
+            </div>
+            <div class="detail-row">
+              <span class="label" id="roomTitleLabel">Loại phòng:</span>
+              <span class="value highlight" id="roomTitle">—</span>
+            </div>
+            <div class="detail-row" id="serviceRow" hidden>
+              <span class="label">Dịch vụ:</span>
+              <span class="value" id="serviceInfo">—</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Thời gian lưu trú:</span>
+              <span class="value" id="stayDates">—</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Số khách:</span>
+              <span class="value" id="guestCount">—</span>
+            </div>
+            <div class="detail-row" id="pricePerPersonRow" hidden>
+              <span class="label">Giá mỗi người:</span>
+              <span class="value" id="pricePerPerson">—</span>
+            </div>
+            <div class="detail-row total-row">
+              <span class="label">Tổng chi phí:</span>
+              <span class="value price" id="totalPrice">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-box">
+          <a href="rooms.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Quay về trang chọn phòng</a> <a href="history.html" class="btn-back">Xem lịch sử đặt</a> <a href="index.html" class="btn-back">Về trang chủ
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        try {
+          const order = JSON.parse(localStorage.getItem("lastOrder") || "null");
+          if (!order) {
+            // Mở trang trực tiếp khi chưa đặt gì
+            document.querySelector(".success-title").textContent = "Chưa có đơn đặt phòng";
+            document.querySelector(".success-subtitle").textContent =
+              "Bạn chưa hoàn tất đơn đặt phòng nào. Hãy chọn phòng để bắt đầu.";
+            document.querySelector(".success-icon").style.display = "none";
+            document.querySelector(".booking-details-box").style.display = "none";
+            return;
+          }
+          if (order.type === "table") {
+            document.getElementById("roomTitleLabel").textContent = "Nhà hàng:";
+            document.querySelector(".success-title").textContent = "Đặt Bàn Thành Công!";
+            const parts = [order.packageName, ...(order.serviceDetails || [])].filter(Boolean);
+            if (parts.length) {
+              document.getElementById("serviceInfo").textContent = parts.join(" · ");
+              document.getElementById("serviceRow").hidden = false;
+            }
+          }
+          if (order.pricePerPerson) {
+            document.getElementById("pricePerPersonRow").hidden = false;
+          }
+
+          const values = {
+            bookingCode: order.bookingCode
+              ? `Mã đặt phòng: #${order.bookingCode}`
+              : "Mã đặt phòng: —",
+            guestName: order.guestName,
+            guestEmail: order.email,
+            guestPhone: order.phone,
+            roomTitle: order.roomTitle,
+            guestCount:
+              order.guests ||
+              (order.guestCount ? `${order.guestCount} khách` : "—"),
+            pricePerPerson: order.pricePerPerson
+              ? `${order.pricePerPerson} USD / người`
+              : "—",
+            stayDates: order.stayDates,
+            totalPrice: order.totalPrice,
+          };
+
+          Object.entries(values).forEach(([id, value]) => {
+            const element = document.getElementById(id);
+            if (element && value) element.textContent = value;
+          });
+        } catch (error) {
+          console.error("Không thể đọc thông tin đặt phòng:", error);
+        }
+      });
+    </script>
+  <div class="jw-chrome"><footer class="main-dark-footer">
+<div class="footer-hotel-info"><h2>JW MARRIOTT® HOTEL HANOI</h2><div class="info-grid">
+<div class="links-col"><a href="index.html">Tổng quan</a><a href="rooms.html">Phòng</a><a href="room-detail.html?id=deluxe-king">Phòng Deluxe King</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ &amp; Tiện ích</a><a href="offers.html">Ưu đãi</a></div>
+<div class="links-col"><a href="rooms.html">Đặt phòng ngay</a><a href="history.html">Lịch sử đặt</a><a href="index.html#ban-do">Bản đồ &amp; cách di chuyển</a></div>
+<div class="address-col"><p>SỐ 8 ĐƯỜNG ĐỖ ĐỨC DỤC, PHƯỜNG MỄ TRÌ, QUẬN NAM TỪ LIÊM, HÀ NỘI, VIỆT NAM</p><p>HOTLINE: <a href="tel:+842438335588" style="color:inherit">+84 24 3833 5588</a></p></div></div></div>
+<div class="footer-accordions">
+<div class="acc-item"><button class="acc-head" type="button"><span>Dành cho khách</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="rooms.html">Đặt phòng</a><a href="history.html">Lịch sử đặt</a><a href="cuisine.html">Đặt bàn nhà hàng</a><a href="services.html">Dịch vụ &amp; Tiện ích</a></div></div>
+<div class="acc-item"><button class="acc-head" type="button"><span>Công ty của chúng tôi</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="index.html">Về JW Marriott Hotel Hanoi</a><a href="https://www.marriott.com" target="_blank" rel="noopener">Marriott International</a></div></div></div>
+<div class="footer-copyright"><p>© 2026 JW Marriott Hotel Hanoi — Website mô phỏng phục vụ bài tập lớn, không phải trang chính thức của Marriott International.</p></div>
+</footer></div>
+<script src="js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+/* =========================================================
+   SERVICES.CSS - BỘ STYLE HOÀN CHỈNH CHO TRANG DỊCH VỤ
+   ========================================================= */
+
+:root {
+  --hotel-black: #121619;
+  --hotel-gold: #c5a059;
+  --hotel-gray-bg: #fafafa;
+  --hotel-text-muted: #666666;
+  --hotel-border: #e0e0e0;
+  
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #2c2c2c;
+  background-color: #ffffff;
+  line-height: 1.8;
+}
+
+.hotel-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --- HERO BANNER SÂN VƯỜN --- */
+.hotel-hero {
+  position: relative;
+  height: 420px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hotel-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hotel-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hotel-hero__subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hotel-hero__title {
+  font-family: var(--font-heading) !important;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hotel-divider-center {
+  width: 50px;
+  height: 2px;
+  background-color: var(--hotel-gold);
+  margin: 20px auto 0 auto;
+}
+
+/* --- Z-PATTERN SERVICES --- */
+.hotel-section {
+  padding: 80px 20px;
+}
+
+.hotel-service-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+.hotel-service-card:last-child {
+  margin-bottom: 0;
+}
+
+.hotel-service-card--reverse {
+  flex-direction: row-reverse;
+}
+
+.hotel-service-card__img-wrapper {
+  flex: 1.2;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hotel-service-card__img-wrapper img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.hotel-service-card:hover .hotel-service-card__img-wrapper img {
+  transform: scale(1.04);
+}
+
+.hotel-service-card__info {
+  flex: 1;
+}
+
+.hotel-service-card__tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--hotel-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hotel-service-card__title {
+  font-family: var(--font-heading) !important;
+  font-size: 2rem;
+  color: var(--hotel-black);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.hotel-divider {
+  width: 45px;
+  height: 2px;
+  background-color: var(--hotel-gold);
+  margin-bottom: 18px;
+}
+
+.hotel-service-card__desc {
+  color: var(--hotel-text-muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.hotel-service-card__meta {
+  font-size: 0.88rem;
+  color: #444444;
+  margin-bottom: 25px;
+  border-top: 1px solid var(--hotel-border);
+  border-bottom: 1px solid var(--hotel-border);
+  padding: 12px 0;
+}
+
+.hotel-service-card__meta p {
+  margin-bottom: 6px;
+}
+
+.btn-hotel {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid var(--hotel-black);
+  color: var(--hotel-black);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background: transparent;
+  border-radius: 2px;
+}
+
+.btn-hotel:hover {
+  background-color: var(--hotel-black);
+  color: #ffffff;
+}
+
+/* --- GRID CARDS TIỆN ÍCH --- */
+.hotel-amenities-bg {
+  background-color: var(--hotel-gray-bg);
+  padding: 80px 20px;
+}
+
+.hotel-section-title {
+  font-family: var(--font-heading) !important;
+  font-size: 2.2rem;
+  color: var(--hotel-black);
+  margin-top: 5px;
+}
+
+.note-click-desc {
+  font-size: 0.88rem;
+  color: var(--hotel-text-muted);
+  margin-bottom: 30px;
+}
+
+.hotel-grid-amenities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.amenity-card {
+  background: #ffffff;
+  border: 1px solid var(--hotel-border);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-card__img-box {
+  height: 200px;
+  overflow: hidden;
+}
+
+.amenity-card__img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.amenity-card:hover .amenity-card__img-box img {
+  transform: scale(1.05);
+}
+
+.amenity-card__content {
+  padding: 28px 20px 32px;
+  text-align: center;
+}
+
+.amenity-card__content h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.amenity-card__content p {
+  font-size: 0.88rem;
+  color: var(--hotel-text-muted);
+  line-height: 1.65;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* --- POPUP MODAL --- */
+.service-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 22, 25, 0.75);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.service-modal.active {
+  display: flex !important;
+}
+
+.service-modal-content {
+  background: #ffffff;
+  max-width: 580px;
+  width: 100%;
+  padding: 35px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  animation: modalSlideUp 0.35s ease;
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-modal-close {
+  position: absolute;
+  top: 15px; right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--hotel-black);
+  transition: color 0.3s;
+}
+
+.service-modal-close:hover {
+  color: var(--hotel-gold);
+}
+
+.service-modal-title {
+  font-family: var(--font-heading) !important;
+  font-size: 1.8rem;
+  color: var(--hotel-black);
+  margin-bottom: 10px;
+}
+
+.modal-gold-line {
+  width: 45px;
+  height: 2px;
+  background: var(--hotel-gold);
+  margin-bottom: 16px;
+}
+
+.modal-short-desc {
+  font-weight: 600;
+  color: var(--hotel-black);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.service-modal-desc {
+  font-size: 0.92rem;
+  color: var(--hotel-text-muted);
+  line-height: 1.75;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .hotel-grid-amenities {
+    grid-template-columns: 1fr;
+  }
+  .hotel-service-card, 
+  .hotel-service-card--reverse {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hotel-hero {
+    height: 320px;
+  }
+  .hotel-hero__title {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Phòng - JW Marriott Hotel Hanoi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/room-detail.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" href="images/download.png">
+</head>
+<body>
+<div class="jw-chrome"><header class="dark-header">
+<div class="top-nav"><div class="header-logo"><a href="index.html"><img class="logo" alt="JW Marriott" src="images/header-logo.png"></a></div>
+<button class="menu-toggle" aria-label="Menu">&#9776;</button>
+<nav class="main-menu"><a href="index.html">Tổng quan</a><a href="rooms.html" class="active">Phòng</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ & Tiện ích</a><a href="history.html">Lịch sử đặt</a><a class="menu-cta" href="rooms.html">Đặt phòng ngay</a></nav></div>
+<div class="sub-header"><div class="hotel-title-group"><h2>JW MARRIOTT HOTEL HANOI</h2>
+<div class="rating"><span class="stars" role="img" aria-label="4,6 trên 5 sao">★★★★<span class="half">★</span></span><span class="review-count">4.6 • 1112 Đánh giá</span></div></div>
+<div class="contact-links"><a href="index.html#ban-do"><i class="fa-solid fa-location-dot"></i> XEM BẢN ĐỒ</a><a href="tel:+842438335588"><i class="fa-solid fa-phone"></i> HOTLINE: +84 24 3833 5588</a></div></div>
+</header></div>
+<main>
+    <!-- Nội dung trang được điền bằng js/room-detail.js theo ?id= trên địa chỉ -->
+    <section class="hotel-hero" id="roomHero">
+      <div class="hotel-hero__overlay"></div>
+      <div class="hotel-hero__content">
+        <span class="hotel-hero__subtitle" id="roomTag">KHÔNG GIAN NGHỈ DƯỠNG ĐỈNH CAO</span>
+        <h1 class="hotel-hero__title" id="roomName">Chi Tiết Phòng</h1>
+        <div class="hotel-divider-center"></div>
+      </div>
+    </section>
+
+    <nav class="hotel-container breadcrumb" aria-label="Đường dẫn">
+      <a href="index.html">Tổng quan</a> <span>/</span> <a href="rooms.html">Phòng</a> <span>/</span> <span id="crumbName">Chi tiết phòng</span>
+    </nav>
+
+    <section class="hotel-section hotel-container">
+      <div class="room-gallery" id="roomGallery">
+        <div class="gallery__item gallery__item--main"><img alt=""></div>
+        <div class="gallery__item"><img alt=""></div>
+        <div class="gallery__item"><img alt=""></div>
+      </div>
+    </section>
+
+    <section class="hotel-section hotel-container">
+      <div class="room-content-layout">
+        <article class="room-info">
+          <div class="info-block">
+            <span class="hotel-service-card__tag" id="roomTag2"></span>
+            <h2 class="hotel-service-card__title">Mô Tả Phòng</h2>
+            <div class="hotel-divider"></div>
+            <p class="hotel-service-card__desc" id="roomDesc"></p>
+          </div>
+
+          <div class="info-block">
+            <h2 class="hotel-service-card__title">Thông Số Chi Tiết</h2>
+            <div class="hotel-divider"></div>
+            <div class="quick-spec">
+              <div class="spec-item">
+                <div class="spec-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                <div class="spec-text"><small>Diện tích</small><strong id="spec-area">—</strong></div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div class="spec-text"><small>Sức chứa</small><strong id="spec-capacity">—</strong></div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg></div>
+                <div class="spec-text"><small>Loại giường</small><strong id="spec-bed">—</strong></div>
+              </div>
+              <div class="spec-item">
+                <div class="spec-icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <div class="spec-text"><small>Hướng nhìn</small><strong id="spec-view">—</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <h2 class="hotel-service-card__title">Điểm Nổi Bật Của Phòng</h2>
+            <div class="hotel-divider"></div>
+            <div class="amenities-list-grid highlight-grid" id="roomExtras"></div>
+          </div>
+
+          <div class="info-block">
+            <h2 class="hotel-service-card__title">Tiện Nghi Trong Phòng</h2>
+            <div class="hotel-divider"></div>
+            <div class="amenities-list-grid" id="roomAmenities"></div>
+          </div>
+
+          <div class="info-block lounge-block" id="loungeBlock" hidden>
+            <h2 class="hotel-service-card__title">Đặc Quyền Executive Lounge</h2>
+            <div class="hotel-divider"></div>
+            <ul class="perk-list" id="loungePerks"></ul>
+          </div>
+
+          <div class="info-block">
+            <h2 class="hotel-service-card__title">Chính Sách Phòng</h2>
+            <div class="hotel-divider"></div>
+            <ul class="policy-list-detail" id="roomPolicies"></ul>
+          </div>
+        </article>
+
+        <aside class="booking-sidebar">
+          <div class="booking-widget">
+            <div class="widget-price">
+              <span class="price-amount" id="widgetPrice">— USD</span>
+              <span class="price-unit">/ đêm</span>
+            </div>
+
+            <form id="detailBookingForm" class="widget-form">
+              <div class="form-group">
+                <label for="checkin">Ngày nhận phòng</label>
+                <input type="date" id="checkin" required class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="checkout">Ngày trả phòng</label>
+                <input type="date" id="checkout" required class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="guests">Số lượng khách</label>
+                <select id="guests" class="form-control"></select>
+              </div>
+
+              <div class="widget-total">
+                <span id="widgetNights">1 đêm</span>
+                <strong id="widgetTotal">— USD</strong>
+              </div>
+
+              <button type="submit" class="btn-hotel widget-submit">ĐẶT PHÒNG NGAY</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="hotel-section hotel-container other-rooms">
+      <h2 class="hotel-service-card__title">Có Thể Quý Khách Cũng Thích</h2>
+      <div class="hotel-divider"></div>
+      <div class="other-rooms__grid" id="otherRooms"></div>
+    </section>
+  </main>
+
+  <div class="jw-chrome"><footer class="main-dark-footer">
+<div class="footer-hotel-info"><h2>JW MARRIOTT® HOTEL HANOI</h2><div class="info-grid">
+<div class="links-col"><a href="index.html">Tổng quan</a><a href="rooms.html">Phòng</a><a href="room-detail.html?id=deluxe-king">Phòng Deluxe King</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ &amp; Tiện ích</a><a href="offers.html">Ưu đãi</a></div>
+<div class="links-col"><a href="rooms.html">Đặt phòng ngay</a><a href="history.html">Lịch sử đặt</a><a href="index.html#ban-do">Bản đồ &amp; cách di chuyển</a></div>
+<div class="address-col"><p>SỐ 8 ĐƯỜNG ĐỖ ĐỨC DỤC, PHƯỜNG MỄ TRÌ, QUẬN NAM TỪ LIÊM, HÀ NỘI, VIỆT NAM</p><p>HOTLINE: <a href="tel:+842438335588" style="color:inherit">+84 24 3833 5588</a></p></div></div></div>
+<div class="footer-accordions">
+<div class="acc-item"><button class="acc-head" type="button"><span>Dành cho khách</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="rooms.html">Đặt phòng</a><a href="history.html">Lịch sử đặt</a><a href="cuisine.html">Đặt bàn nhà hàng</a><a href="services.html">Dịch vụ &amp; Tiện ích</a></div></div>
+<div class="acc-item"><button class="acc-head" type="button"><span>Công ty của chúng tôi</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="index.html">Về JW Marriott Hotel Hanoi</a><a href="https://www.marriott.com" target="_blank" rel="noopener">Marriott International</a></div></div></div>
+<div class="footer-copyright"><p>© 2026 JW Marriott Hotel Hanoi — Website mô phỏng phục vụ bài tập lớn, không phải trang chính thức của Marriott International.</p></div>
+</footer></div>
+<script src="js/site.js"></script>
+<script src="js/rooms-data.js"></script>
+<script src="js/room-detail.js"></script>
+</body>
+</html>

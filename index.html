@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW Marriott Hotel Hanoi - Tổng Quan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="icon" type="image/png" href="images/download.png">
+</head>
+<body>
+<div class="jw-chrome"><header class="dark-header">
+<div class="top-nav"><div class="header-logo"><a href="index.html"><img class="logo" alt="JW Marriott" src="images/header-logo.png"></a></div>
+<button class="menu-toggle" aria-label="Menu">&#9776;</button>
+<nav class="main-menu"><a href="index.html" class="active">Tổng quan</a><a href="rooms.html">Phòng</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ & Tiện ích</a><a href="history.html">Lịch sử đặt</a><a class="menu-cta" href="rooms.html">Đặt phòng ngay</a></nav></div>
+<div class="sub-header"><div class="hotel-title-group"><h2>JW MARRIOTT HOTEL HANOI</h2>
+<div class="rating"><span class="stars" role="img" aria-label="4,6 trên 5 sao">★★★★<span class="half">★</span></span><span class="review-count">4.6 • 1112 Đánh giá</span></div></div>
+<div class="contact-links"><a href="index.html#ban-do"><i class="fa-solid fa-location-dot"></i> XEM BẢN ĐỒ</a><a href="tel:+842438335588"><i class="fa-solid fa-phone"></i> HOTLINE: +84 24 3833 5588</a></div></div>
+</header></div>
+
+<!-- HERO BANNER -->
+<section class="hero-section">
+    <img src="images/jwma1.jpeg" class="anhkhachsan1" alt="Toàn cảnh JW Marriott Hotel Hanoi">
+    <div class="hero-overlay">
+        <p class="hero-subtitle">CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI JW MARRIOTT HOTEL HANOI</p>
+        <h1 class="hero-title">DẤU ẤN LƯU TRÚ SANG TRỌNG TẠI HÀ NỘI</h1>
+        <p class="hero-desc">
+            Khám phá một chuẩn mực mới của sự sang trọng và lòng hiếu khách tại JW Marriott Hotel Hanoi. Tựa mình bên mặt hồ yên ả, khách sạn sở hữu 450 phòng và Suite được thiết kế trang nhã, kết hợp hài hòa giữa thẩm mỹ đương đại và tiện nghi cao cấp.
+        </p>
+    </div>
+</section>
+
+<!-- THANH TÌM KIẾM ĐẶT PHÒNG MARRIOTT -->
+<div class="marriott-search-container">
+    <form action="rooms.html" method="GET" class="marriott-search-bar">
+        <div class="search-field">
+            <span class="field-label">Điểm đến</span>
+            <div class="field-value">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" value="JW Marriott Hotel Hanoi" readonly />
+            </div>
+        </div>
+
+        <div class="search-field">
+            <span class="field-label">Ngày nhận &amp; trả phòng</span>
+            <div class="field-value">
+                <i class="fa-regular fa-calendar-days"></i>
+                <input type="date" name="checkin" required class="date-input" />
+                <span class="date-sep">-</span>
+                <input type="date" name="checkout" required class="date-input" />
+            </div>
+        </div>
+
+        <div class="search-field" id="guestPickerTrigger">
+            <span class="field-label">Số phòng &amp; Khách</span>
+            <div class="field-value">
+                <i class="fa-solid fa-user-group"></i>
+                <span id="guestSummaryText">1 Phòng, 1 Khách</span>
+            </div>
+
+            <div class="guests-dropdown" id="guestsDropdown">
+                <div class="counter-row">
+                    <span>Số phòng</span>
+                    <div class="counter-btn-group">
+                        <button type="button" onclick="updateCount('rooms', -1)">-</button>
+                        <span id="roomsVal">1</span>
+                        <button type="button" onclick="updateCount('rooms', 1)">+</button>
+                    </div>
+                </div>
+                <div class="counter-row">
+                    <span>Người lớn</span>
+                    <div class="counter-btn-group">
+                        <button type="button" onclick="updateCount('guests', -1)">-</button>
+                        <span id="guestsVal">1</span>
+                        <button type="button" onclick="updateCount('guests', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-field">
+            <span class="field-label">Giá ưu đãi</span>
+            <div class="field-value">
+                <i class="fa-solid fa-tag"></i>
+                <select name="rateType">
+                    <option value="standard">Giá tiêu chuẩn thấp nhất</option>
+                    <option value="member">Giá Hội viên Marriott Bonvoy</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-marriott-search">
+            TÌM PHÒNG
+        </button>
+    </form>
+</div>
+
+<!-- KHỐI CAM KẾT -->
+<div class="commitment-card">
+    <div class="commitment-header">
+        <span class="commitment-title">Cam Kết Của Chúng Tôi</span>
+    </div>
+    <p class="commitment-text">
+        Chúng tôi đảm bảo nguồn nước tại khách sạn đáp ứng đầy đủ các tiêu chuẩn an toàn và vệ sinh. Đồng thời, khách sạn cam kết tuân thủ Luật Bảo vệ Môi trường nhằm mang đến sự yên tâm và trải nghiệm tốt nhất cho quý khách.
+    </p>
+</div>
+
+<!-- KHỐI GIỚI THIỆU KHÔNG GIAN & THIÊN NHIÊN -->
+<div class="intro-grid-container">
+
+    <div class="intro-row">
+        <div class="intro-img-box">
+            <img src="images/anhgt1.jpeg" alt="Khu vườn ven hồ JW" loading="lazy">
+        </div>
+        <div class="intro-text-box">
+            <h3>Cảm Nhận Thiên Nhiên Quanh Ta</h3>
+            <p>Khu Vườn Ven Hồ JW là một chốn bình yên chào đón quý khách đến với vẻ đẹp của thiên nhiên. Chúng tôi tự hào là khách sạn duy nhất trong thành phố sở hữu khuôn viên vườn ven hồ rộng lớn, mang lại một không gian xanh mướt và tĩnh lặng với nhiều khu vực để quý khách có thể ngồi nghỉ, thư giãn và chiêm nghiệm.</p>
+        </div>
+    </div>
+
+    <div class="intro-row reverse">
+        <div class="intro-text-box">
+            <h4>Khám Phá, Thư Giãn Và Tận Hưởng</h4>
+            <p>Mỗi kỳ lưu trú không chỉ đơn thuần là khoảng thời gian nghỉ ngơi, mà còn là hành trình khám phá, gắn kết và lưu giữ những khoảnh khắc đáng nhớ. Các gia đình có trẻ em có thể tận hưởng không gian trải nghiệm phong phú tại Khu Vườn Ven Hồ JW, Nhà Kính JW hoặc Kids Café by JW.</p>
+        </div>
+        <div class="intro-img-box">
+            <img src="images/anhgt2.jpeg" alt="Trẻ em khám phá thiên nhiên" loading="lazy">
+        </div>
+    </div>
+
+    <div class="intro-row">
+        <div class="intro-img-box">
+            <img src="images/anhgt3.jpeg" alt="Gia đình trong Nhà Kính JW" loading="lazy">
+        </div>
+        <div class="intro-text-box">
+            <h5>Kỳ Nghỉ Gia Đình Tràn Ngập Niềm Vui</h5>
+            <p>Hãy tạm gác lại nhịp sống hối hả để tận hưởng khoảnh khắc tuyệt vời bên gia đình tại khu nghỉ dưỡng của chúng tôi. Gói phòng dành cho gia đình là sự kết hợp hoàn hảo giữa không gian lưu trú thoải mái, trải nghiệm ẩm thực đa dạng và các hoạt động giải trí phong phú cho mọi lứa tuổi.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- KHỐI GIẢI THƯỞNG -->
+<section class="awards-section">
+    <div class="awards-wrapper">
+        <div class="award-card">
+            <h2 class="award-title">CẨM NANG DU LỊCH FORBES CÔNG NHẬN</h2>
+            <div class="award-divider"></div>
+            <p class="award-desc">
+                JW Marriott Hotel Hanoi vinh dự được xướng danh trong giải thưởng Cẩm nang du lịch Forbes 2025, ghi nhận vẻ đẹp cùng sự sang trọng tinh tế, mang đến cho quý khách những trải nghiệm đáng nhớ tại Hà Nội.
+            </p>
+        </div>
+
+        <div class="award-card">
+            <h2 class="award-title">READERS' CHOICE 2025 CỦA DESTINASIAN</h2>
+            <div class="award-divider"></div>
+            <p class="award-desc">
+                JW Marriott Hotel Hanoi đã được vinh danh là Best Vietnam City Hotel tại Giải Thưởng Readers' Choice 2025 của DestinAsian, qua đó ghi nhận tinh thần cống hiến không ngừng trong việc mang đến dịch vụ chất lượng vượt trội.
+            </p>
+        </div>
+
+        <div class="award-card">
+            <h2 class="award-title">CHỨNG NHẬN QUẢ CẦU XANH</h2>
+            <div class="award-divider"></div>
+            <p class="award-desc">
+                Với cam kết phát triển bền vững, JW Marriott Hotel Hanoi tự hào đạt chứng chỉ Green Globe, minh chứng cho những nỗ lực không ngừng trong việc thúc đẩy các sáng kiến bảo vệ môi trường.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- KHÁM PHÁ (GRID CARDS) -->
+<section class="explore-section">
+    <h2 class="explore-title">KHÁM PHÁ JW MARRIOTT</h2>
+    <p class="explore-subtitle">Phòng nghỉ, ẩm thực và dịch vụ dành riêng cho bạn</p>
+    <div class="explore-grid">
+        <a class="explore-card" href="rooms.html">
+            <img src="images/jw-hanjw-deluxe-city-room-23397_Wide-Hor.png" alt="Phòng & Suite">
+            <div class="explore-content">
+                <strong>Phòng &amp; Suite</strong>
+                <span>Xem phòng &rarr;</span>
+            </div>
+        </a>
+        <a class="explore-card" href="cuisine.html">
+            <img src="images/jw-hanjw-french-grill-27972-26761-wide-hor.png" alt="Ẩm thực">
+            <div class="explore-content">
+                <strong>Ẩm thực</strong>
+                <span>Đặt bàn &rarr;</span>
+            </div>
+        </a>
+        <a class="explore-card" href="services.html">
+            <img src="images/spa.jpg" alt="Dịch vụ & Tiện ích">
+            <div class="explore-content">
+                <strong>Dịch vụ &amp; Tiện ích</strong>
+                <span>Khám phá &rarr;</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- BẢN ĐỒ VÀ ĐỊA ĐIỂM (LUXURY CARD) -->
+<section class="location-card-section" id="ban-do">
+    <div class="location-card-inner">
+        <!-- CỘT THÔNG TIN BÊN TRÁI -->
+        <div class="location-info">
+            <span class="location-tag"><i class="fa-solid fa-compass"></i> ĐỊA ĐIỂM &amp; BẢN ĐỒ</span>
+            <h2 class="location-title">CÁCH DI CHUYỂN</h2>
+            <div class="location-divider"></div>
+
+            <div class="hotel-details">
+                <h3 class="hotel-name">JW Marriott Hotel Hanoi</h3>
+                <p class="hotel-address">
+                    <i class="fa-solid fa-location-dot icon-gold"></i>
+                    <span>Số 8 Đường Đỗ Đức Dục, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội, Việt Nam</span>
+                </p>
+                <p class="hotel-phone">
+                    <i class="fa-solid fa-phone icon-gold"></i>
+                    <span>Hotline: <a href="tel:+842438335588">+84 24 3833 5588</a></span>
+                </p>
+            </div>
+
+            <a href="https://maps.app.goo.gl/fVWSQWEDqWVU7yDe6" target="_blank" rel="noopener" class="btn-maps-gold">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Mở Bản Đồ Google Maps</span>
+            </a>
+        </div>
+
+        <!-- CỘT BẢN ĐỒ BÊN PHẢI -->
+        <div class="location-map-wrap">
+            <a href="https://maps.app.goo.gl/fVWSQWEDqWVU7yDe6" target="_blank" rel="noopener" class="map-link-overlay" title="Mở trong Google Maps">
+                <img src="images/map.jpg" alt="Bản đồ vị trí JW Marriott Hanoi" loading="lazy">
+                <div class="map-hover-badge">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Xem chi tiết
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="jw-chrome"><footer class="main-dark-footer">
+<div class="footer-hotel-info"><h2>JW MARRIOTT® HOTEL HANOI</h2><div class="info-grid">
+<div class="links-col"><a href="index.html">Tổng quan</a><a href="rooms.html">Phòng</a><a href="room-detail.html?id=deluxe-king">Phòng Deluxe King</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ &amp; Tiện ích</a><a href="offers.html">Ưu đãi</a></div>
+<div class="links-col"><a href="rooms.html">Đặt phòng ngay</a><a href="history.html">Lịch sử đặt</a><a href="index.html#ban-do">Bản đồ &amp; cách di chuyển</a></div>
+<div class="address-col"><p>SỐ 8 ĐƯỜNG ĐỖ ĐỨC DỤC, PHƯỜNG MỄ TRÌ, QUẬN NAM TỪ LIÊM, HÀ NỘI, VIỆT NAM</p><p>HOTLINE: <a href="tel:+842438335588" style="color:inherit">+84 24 3833 5588</a></p></div></div></div>
+<div class="footer-accordions">
+<div class="acc-item"><button class="acc-head" type="button"><span>Dành cho khách</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="rooms.html">Đặt phòng</a><a href="history.html">Lịch sử đặt</a><a href="cuisine.html">Đặt bàn nhà hàng</a><a href="services.html">Dịch vụ &amp; Tiện ích</a></div></div>
+<div class="acc-item"><button class="acc-head" type="button"><span>Công ty của chúng tôi</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="index.html">Về JW Marriott Hotel Hanoi</a><a href="https://www.marriott.com" target="_blank" rel="noopener">Marriott International</a></div></div></div>
+<div class="footer-copyright"><p>© 2026 JW Marriott Hotel Hanoi — Website mô phỏng phục vụ bài tập lớn, không phải trang chính thức của Marriott International.</p></div>
+</footer></div>
+
+<!-- JAVASCRIPT XỬ LÝ DROPDOWN KHÁCH -->
+<script>
+  let rooms = 1;
+  let guests = 1;
+
+  const trigger = document.getElementById('guestPickerTrigger');
+  const dropdown = document.getElementById('guestsDropdown');
+
+  if (trigger && dropdown) {
+      trigger.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'BUTTON') {
+          dropdown.classList.toggle('active');
+        }
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!trigger.contains(e.target)) {
+          dropdown.classList.remove('active');
+        }
+      });
+  }
+
+  function updateCount(type, delta) {
+    if (type === 'rooms') {
+      rooms = Math.max(1, rooms + delta);
+      document.getElementById('roomsVal').textContent = rooms;
+    } else if (type === 'guests') {
+      guests = Math.max(1, guests + delta);
+      document.getElementById('guestsVal').textContent = guests;
+    }
+    document.getElementById('guestSummaryText').textContent = `${rooms} Phòng, ${guests} Khách`;
+  }
+</script>
+
+<script src="js/site.js"></script>
+</body>
+</html>

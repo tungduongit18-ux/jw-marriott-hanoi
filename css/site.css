@@ -1,0 +1,134 @@
+/* ===== Header & footer dùng chung — theo giao diện trang Ẩm thực ===== */
+body{margin:0}
+.jw-chrome,.jw-chrome *{box-sizing:border-box;margin:0;padding:0;font-family:var(--font-body);line-height:1.5;text-align:left}
+.jw-chrome a{text-decoration:none}
+.jw-chrome .dark-header{background:#000;border-top:3px solid #fff;border-bottom:3px solid #fff;padding:10px 40px;position:relative;z-index:2000}
+.jw-chrome .top-nav{max-width:1350px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #fff;padding-bottom:10px}
+.jw-chrome .header-logo{display:flex;align-items:center}
+.jw-chrome .header-logo a{display:inline-block}
+.jw-chrome .header-logo .logo{height:52px;width:auto;display:block;object-fit:contain}
+.jw-chrome .main-menu{display:flex;align-items:center;gap:32px}
+.jw-chrome .main-menu a{color:#b5b5b5;font-size:15px;font-weight:400;letter-spacing:.3px;transition:all .2s ease}
+.jw-chrome .main-menu a:hover,.jw-chrome .main-menu a.active{color:#fff;font-weight:600}
+.jw-chrome .main-menu a.menu-cta{border:1px solid #fff;color:#fff;padding:6px 16px}
+.jw-chrome .main-menu a.menu-cta:hover{background:#fff;color:#000}
+.jw-chrome .menu-toggle{display:none;background:none;border:1px solid #fff;color:#fff;font-size:20px;padding:2px 12px;cursor:pointer}
+.jw-chrome .sub-header{max-width:1350px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:10px}
+.jw-chrome .hotel-title-group{display:flex;flex-direction:column}
+.jw-chrome .hotel-title-group h2{font-family:var(--font-heading);font-size:22px;font-weight:400;color:#fff;letter-spacing:1px}
+.jw-chrome .rating{font-size:13px;color:#fff;margin-top:2px;display:flex;align-items:center;gap:6px}
+.jw-chrome .rating .stars{color:#fff;letter-spacing:2px;font-size:14px;line-height:1}
+.jw-chrome .rating .stars .half{background:linear-gradient(90deg,#fff 60%,#5a5a5a 60%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.jw-chrome .review-count{color:#b5b5b5}
+.jw-chrome .contact-links{display:flex;align-items:center;gap:24px;font-size:13px}
+.jw-chrome .contact-links a{color:#fff;font-weight:600;display:flex;align-items:center;gap:6px}
+.jw-chrome .contact-links a:hover{text-decoration:underline}
+.jw-chrome i{font-family:"Font Awesome 6 Free","Font Awesome 6 Brands"}
+.jw-chrome .fa-brands{font-family:"Font Awesome 6 Brands"}
+@media(max-width:900px){
+ .jw-chrome .dark-header{padding:10px 16px}
+ .jw-chrome .menu-toggle{display:block}
+ .jw-chrome .main-menu{display:none;position:absolute;left:0;right:0;top:78px;background:#000;flex-direction:column;align-items:stretch;gap:0;padding:6px 16px 16px;border-bottom:3px solid #fff}
+ .jw-chrome .main-menu.open{display:flex}
+ .jw-chrome .main-menu a{padding:12px 0;border-bottom:1px solid #222}
+ .jw-chrome .main-menu a.menu-cta{text-align:center;margin-top:10px}
+ .jw-chrome .sub-header{flex-direction:column;align-items:flex-start;gap:8px}
+ .jw-chrome .hotel-title-group h2{font-size:18px}
+}
+.jw-chrome .main-dark-footer{background:#1a1a1a;color:#fff;padding:40px 60px 30px}
+.jw-chrome .bonvoy-app-banner{display:flex;align-items:center;gap:20px;padding-bottom:30px;border-bottom:1px solid #333;margin-bottom:30px}
+.jw-chrome .bonvoy-logo{border:1px solid #fff;padding:4px 12px;font-weight:bold;letter-spacing:2px;font-size:12px}
+.jw-chrome .bonvoy-text{font-size:14px;cursor:pointer}
+.jw-chrome .footer-hotel-info h2{font-family:var(--font-heading);font-size:22px;font-weight:300;margin-bottom:24px;letter-spacing:1px}
+.jw-chrome .info-grid{display:grid;grid-template-columns:1fr 1fr 2fr;gap:30px;font-size:13px;margin-bottom:30px}
+.jw-chrome .links-col a{display:block;color:#ccc;margin-bottom:10px;transition:color .2s}
+.jw-chrome .links-col a:hover{color:#fff}
+.jw-chrome .address-col p{color:#aaa;margin-bottom:8px}
+.jw-chrome .social-follow{display:flex;align-items:center;gap:16px;padding-bottom:24px;border-bottom:1px solid #333;font-size:13px}
+.jw-chrome .social-follow a{color:#fff;font-size:16px}
+.jw-chrome .footer-accordions{margin:20px 0;border-bottom:1px solid #333}
+.jw-chrome .acc-item{border-top:1px solid #333;font-size:14px}
+.jw-chrome .acc-head{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;color:#fff;padding:16px 0;font-size:14px;cursor:pointer}
+.jw-chrome .acc-panel{display:none;padding:0 0 14px;font-size:13px}
+.jw-chrome .acc-panel a{display:block;color:#ccc;margin-bottom:8px}
+.jw-chrome .acc-panel a:hover{color:#fff}
+.jw-chrome .acc-item.open .acc-panel{display:block}
+.jw-chrome .acc-item.open .fa-chevron-down{transform:rotate(180deg)}
+.jw-chrome .footer-bottom-social{display:flex;align-items:center;gap:18px;margin-bottom:24px;font-size:14px}
+.jw-chrome .footer-copyright{font-size:11px;color:#888;border-top:1px solid #333;padding-top:20px;line-height:1.6}
+.jw-chrome .footer-legal-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+.jw-chrome .footer-legal-links a{color:#888}
+.jw-chrome .footer-legal-links a:hover{text-decoration:underline}
+@media(max-width:800px){.jw-chrome .main-dark-footer{padding:30px 20px}.jw-chrome .info-grid{grid-template-columns:1fr}}
+
+/* Lối tắt khám phá ở trang chủ */
+.explore{max-width:1200px;margin:70px auto 20px;padding:0 24px;font-family:var(--jw-body)}
+.explore h2{font-family:var(--jw-head);text-align:center;font-size:1.9rem;letter-spacing:2px;margin:0 0 6px}
+.explore .explore__sub{text-align:center;color:#777;margin:0 0 30px}
+.explore__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.explore__card{position:relative;display:block;height:300px;overflow:hidden;color:#fff;text-decoration:none}
+.explore__card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.explore__card:hover img{transform:scale(1.07)}
+.explore__card::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.7))}
+.explore__card div{position:absolute;left:22px;bottom:20px;z-index:1}
+.explore__card strong{display:block;font-family:var(--jw-head);font-size:1.4rem;letter-spacing:1px}
+.explore__card span{font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--jw-gold)}
+@media(max-width:800px){.explore__grid{grid-template-columns:1fr}}
+
+/* ===== Hiệu ứng chuyển trang ===== */
+/* chỉ dùng opacity (không dùng transform trên body để không làm lệch các phần tử position: fixed) */
+body { animation: jwPageIn 0.45s ease both; }
+@keyframes jwPageIn { from { opacity: 0; } to { opacity: 1; } }
+body.page-leaving { opacity: 0; transition: opacity 0.28s ease; }
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+.page-loader.show { opacity: 1; visibility: visible; }
+.page-loader__box { text-align: center; color: #1c1c1c; font-family: var(--font-body); }
+.page-loader__box p { margin: 16px 0 0; font-size: 15px; letter-spacing: 0.5px; }
+.page-loader__spinner {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border: 3px solid #e5e5e5;
+  border-top-color: #c5a059;
+  border-radius: 50%;
+  animation: jwSpin 0.8s linear infinite;
+}
+@keyframes jwSpin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+}
+
+/* ===== FONT DÙNG CHUNG CHO CẢ WEBSITE =====
+   Tiêu đề: Playfair Display (có chân, sang trọng)
+   Nội dung: Montserrat (rõ ràng, dễ đọc)
+   Muốn đổi font cả web chỉ cần sửa 2 dòng --font-heading và --font-body. */
+:root {
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Montserrat", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  /* tên cũ vẫn giữ để các file CSS đang dùng không bị lỗi */
+  --jw-head: var(--font-heading);
+  --jw-body: var(--font-body);
+  --h-head: var(--font-heading);
+  --h-body: var(--font-body);
+}
+body {
+  font-family: var(--font-body);
+  /* Playfair mặc định dùng số kiểu cổ (nhấp nhô) -> chuyển sang số thẳng hàng cho giá tiền, ngày tháng */
+  font-variant-numeric: lining-nums;
+}
+/* nút, ô nhập mặc định không kế thừa font -> ép kế thừa */
+button, input, select, textarea { font-family: inherit; }

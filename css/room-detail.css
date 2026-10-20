@@ -1,0 +1,479 @@
+:root {
+  --hotel-black: #1c1c1c;
+  --hotel-gold: #c5a059;
+  --hotel-gray-bg: #f7f7f7;
+  --hotel-text-gray: #666666;
+  --hotel-border: #e2e2e2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--hotel-black);
+  background-color: #ffffff;
+  line-height: 1.7; /* Tăng khoảng cách dòng giúp chữ thoáng */
+  -webkit-font-smoothing: antialiased;
+}
+
+.hotel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- HEADER --- */
+.hotel-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid var(--hotel-border);
+  z-index: 1000;
+  padding: 18px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotel-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--hotel-black);
+  text-decoration: none;
+}
+
+.hotel-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hotel-nav a {
+  text-decoration: none;
+  color: var(--hotel-black);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.hotel-nav a:hover,
+.hotel-nav a.active {
+  color: var(--hotel-gold);
+}
+
+.btn-hotel-nav {
+  border: 1px solid var(--hotel-black);
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+}
+
+.btn-hotel-nav:hover {
+  background: var(--hotel-black);
+  color: #fff !important;
+}
+
+/* --- BREADCRUMB --- */
+.room-detail-page {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--hotel-text-gray);
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.breadcrumb a {
+  color: var(--hotel-black);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--hotel-gold);
+}
+
+.breadcrumb .active {
+  color: var(--hotel-gold);
+  font-weight: 400;
+}
+
+/* --- GALLERY (3 ẢNH) --- */
+.room-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 50px;
+  height: 480px;
+}
+
+.gallery__item {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gallery__item:hover img {
+  transform: scale(1.03);
+}
+
+.gallery__item--main {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.room-gallery .gallery__item:not(.gallery__item--main) {
+  height: calc(232.5px); /* Chia đôi chiều cao tổng 480px trừ gap */
+}
+
+/* --- 2 COLUMNS LAYOUT --- */
+.room-content-layout {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.room-info {
+  flex: 1.6;
+}
+
+/* --- ROOM HEADER --- */
+.room-header {
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--hotel-border);
+  padding-bottom: 20px;
+}
+
+.hotel-service-card__tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--hotel-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.room-title {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  color: var(--hotel-black);
+  font-weight: 400;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.room-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.stars {
+  color: var(--hotel-gold);
+  letter-spacing: 2px;
+}
+
+.review-count {
+  color: var(--hotel-text-gray);
+  font-weight: 300;
+}
+
+/* --- INFO BLOCKS --- */
+.info-block {
+  margin-bottom: 35px;
+}
+
+.info-block__title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--hotel-black);
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.info-block__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 1px;
+  background-color: var(--hotel-gold);
+}
+
+.info-block__desc {
+  color: var(--hotel-text-gray);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 300;
+  text-align: justify; /* Căn đều 2 bên đoạn văn bản cho phẳng đẹp */
+}
+
+/* --- AMENITIES GRID --- */
+.amenities-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.amenity-item {
+  font-size: 0.9rem;
+  color: var(--hotel-black);
+  font-weight: 400;
+  background: var(--hotel-gray-bg);
+  padding: 12px 18px;
+  border-radius: 4px;
+  border: 1px solid var(--hotel-border);
+}
+
+/* --- QUICK SPEC (THÔNG SỐ ẢNH) --- */
+.quick-spec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: var(--hotel-gray-bg);
+  padding: 25px;
+  border: 1px solid var(--hotel-border);
+  border-radius: 4px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.spec-icon-box {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.spec-icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.spec-text small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--hotel-text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.spec-text strong {
+  font-size: 0.95rem;
+  color: var(--hotel-black);
+  font-weight: 600;
+}
+
+/* --- SIDEBAR BOOKING WIDGET --- */
+.booking-sidebar {
+  flex: 1;
+  position: sticky;
+  top: 100px;
+}
+
+.booking-widget {
+  background: #ffffff;
+  border: 1px solid var(--hotel-border);
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.widget-price {
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--hotel-border);
+  padding-bottom: 15px;
+}
+
+.price-amount {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--hotel-black);
+}
+
+.price-unit {
+  font-size: 0.85rem;
+  color: var(--hotel-text-gray);
+  font-weight: 300;
+}
+
+.widget-form .form-group {
+  margin-bottom: 20px;
+}
+
+.widget-form label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--hotel-black);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--hotel-border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--hotel-black);
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: var(--hotel-gold);
+}
+
+.btn-hotel {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid var(--hotel-black);
+  color: var(--hotel-black);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-hotel:hover {
+  background-color: var(--hotel-black);
+  color: #ffffff;
+}
+
+/* --- FOOTER --- */
+.hotel-footer {
+  background: var(--hotel-black);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+  .room-content-layout {
+    flex-direction: column;
+  }
+  .booking-sidebar {
+    position: static;
+    width: 100%;
+  }
+  .room-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 260px 180px 180px;
+    height: auto;
+  }
+  .gallery__item--main {
+    grid-row: auto;
+  }
+  .room-gallery .gallery__item:not(.gallery__item--main) {
+    height: auto;
+  }
+}
+/* Banner đầu trang chi tiết phòng */
+.hotel-hero{position:relative;height:260px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:url('../images/jw-hanjw-deluxe-city-room-23397_Wide-Hor.png') center/cover no-repeat}
+.hotel-hero__overlay{position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.hotel-hero__content{position:relative;z-index:1}
+.hotel-hero__subtitle{display:block;font-size:.75rem;letter-spacing:4px;color:#c5a059;margin-bottom:10px}
+.hotel-hero__title{font-family:var(--font-heading);font-size:2.4rem;font-weight:400;color:#fff;margin:0}
+.hotel-divider-center{width:60px;height:2px;background:#c5a059;margin:16px auto 0}
+
+/* ===== Bổ sung cho trang chi tiết dùng dữ liệu ===== */
+.hotel-hero { background-size: cover; background-position: center; height: 320px; }
+.breadcrumb { padding-top: 18px; font-size: 13px; color: #888; }
+.breadcrumb a { color: #555; text-decoration: none; }
+.breadcrumb a:hover { color: var(--hotel-gold); }
+.breadcrumb span { margin: 0 4px; }
+
+.amenity-item::before { content: "✓"; color: var(--hotel-gold); font-weight: 700; margin-right: 8px; }
+.amenity-item.highlight { background: #fbf6ec; border-color: #ead9b5; }
+.amenity-item.highlight::before { content: "★"; }
+
+.perk-list, .policy-list-detail { list-style: none; padding: 0; margin: 15px 0 0; display: grid; gap: 10px; }
+.perk-list li, .policy-list-detail li { position: relative; padding-left: 26px; line-height: 1.6; color: #444; }
+.perk-list li::before { content: "◆"; position: absolute; left: 4px; color: var(--hotel-gold); font-size: 12px; top: 3px; }
+.policy-list-detail li::before { content: "•"; position: absolute; left: 8px; color: #999; }
+.lounge-block { background: #1c1c1c; color: #fff; padding: 28px; border-radius: 8px; }
+.lounge-block .hotel-service-card__title { color: #fff; }
+.lounge-block .perk-list li { color: #ddd; }
+
+.widget-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px dashed #ddd;
+  padding-top: 14px;
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
+.widget-total strong { font-family: var(--font-heading); font-size: 22px; color: #1c1c1c; }
+.widget-submit { width: 100%; text-align: center; margin-top: 15px; }
+
+.other-rooms { padding-bottom: 70px; }
+.other-rooms__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 20px; }
+.other-room-card {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.other-room-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); }
+.other-room-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+.other-room-card__body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+.other-room-card__body strong { font-family: var(--font-heading); font-size: 18px; font-weight: 500; }
+.other-room-card__body span { font-size: 13px; color: #777; }
+.other-room-card__body em { font-style: normal; color: var(--hotel-gold); font-weight: 600; font-size: 14px; }
+
+@media (max-width: 800px) {
+  .hotel-hero { height: 220px; }
+  .other-rooms__grid { grid-template-columns: 1fr; }
+  .lounge-block { padding: 22px 18px; }
+}

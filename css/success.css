@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    var(--font-body);
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #1c1c1c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* header - nội dung - footer xếp dọc */
+}
+
+.success-container {
+  width: 100%;
+  max-width: 580px;
+}
+
+.success-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 60px;
+  color: #2e7d32;
+  margin-bottom: 16px;
+}
+
+.success-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+
+.success-subtitle {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+
+.booking-details-box {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.details-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.booking-code {
+  font-size: 13px;
+  font-weight: 600;
+  color: #535c55;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.detail-row .label {
+  color: #666666;
+}
+
+.detail-row .value {
+  font-weight: 500;
+  color: #1c1c1c;
+  text-align: right;
+}
+
+.detail-row .value.highlight {
+  font-weight: 600;
+  max-width: 65%;
+}
+
+.detail-row.total-row {
+  border-top: 1px dashed #cccccc;
+  padding-top: 10px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.detail-row.total-row .label {
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.detail-row.total-row .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+
+.action-box {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-back {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 12px 32px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: #333333;
+}
+
+/* khung xác nhận nằm giữa, header/footer giãn hết chiều ngang */
+.success-container { margin: 48px auto; padding: 0 16px; flex: 1; }
+.action-box { flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 600px) {
+  .success-container { margin: 24px auto; }
+  .success-card { padding: 28px 18px; }
+  .details-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .detail-row { flex-direction: column; gap: 2px; }
+  .detail-row .value, .detail-row .value.highlight { text-align: left; max-width: 100%; }
+  .btn-back { width: 100%; justify-content: center; }
+}
+
+.detail-row[hidden] { display: none; }
+
+/* ===== Kiểu chữ ===== */
+.success-title, .details-header h3, .detail-row.total-row .price { font-family: var(--font-heading); }
+.success-title { font-weight: 500; font-size: 28px; }
+.details-header h3 { font-weight: 500; font-size: 18px; }
+
+#serviceRow .value { max-width: 65%; }

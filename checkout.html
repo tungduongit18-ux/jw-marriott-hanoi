@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/download.png" />
+    <title>Thanh Toán - JW Marriott Hotel Hanoi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/checkout.css" />
+  <link rel="stylesheet" href="css/site.css">
+<link rel="icon" type="image/png" href="images/download.png">
+</head>
+  <body>
+<div class="jw-chrome"><header class="dark-header">
+<div class="top-nav"><div class="header-logo"><a href="index.html"><img class="logo" alt="JW Marriott" src="images/header-logo.png"></a></div>
+<button class="menu-toggle" aria-label="Menu">&#9776;</button>
+<nav class="main-menu"><a href="index.html">Tổng quan</a><a href="rooms.html" class="active">Phòng</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ & Tiện ích</a><a href="history.html">Lịch sử đặt</a><a class="menu-cta" href="rooms.html">Đặt phòng ngay</a></nav></div>
+<div class="sub-header"><div class="hotel-title-group"><h2>JW MARRIOTT HOTEL HANOI</h2>
+<div class="rating"><span class="stars" role="img" aria-label="4,6 trên 5 sao">★★★★<span class="half">★</span></span><span class="review-count">4.6 • 1112 Đánh giá</span></div></div>
+<div class="contact-links"><a href="index.html#ban-do"><i class="fa-solid fa-location-dot"></i> XEM BẢN ĐỒ</a><a href="tel:+842438335588"><i class="fa-solid fa-phone"></i> HOTLINE: +84 24 3833 5588</a></div></div>
+</header></div>
+<section class="summary-bar">
+      <div class="summary-container">
+        <div class="summary-item">
+          <span class="label">NGÀY LƯU TRÚ</span>
+          <span class="value" id="stayDatesText"
+            >—</span
+          >
+        </div>
+        <div class="divider"></div>
+        <div class="summary-item">
+          <span class="label">TỔNG CHI PHÍ</span>
+          <span class="value price-highlight" id="totalStayText"
+            >0.00 <small>USD</small></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <div class="content-container">
+        <h2 class="page-title">Hoàn Tất Đặt Phòng</h2>
+        <p class="empty-booking" id="emptyBooking" hidden>
+          Bạn chưa chọn phòng hoặc bàn nào.
+          <a href="rooms.html">Chọn phòng</a> hoặc
+          <a href="cuisine.html">đặt bàn nhà hàng</a> trước khi thanh toán.
+        </p>
+
+        <div class="checkout-grid">
+          <div class="form-column">
+            <div class="card-box">
+              
+
+              <div class="guest-info-header">
+                <h3>Thông Tin Khách Hàng</h3>
+                <span class="sub-text"
+                  >Tất cả các trường đều bắt buộc, trừ khi có ghi chú khác.</span
+                >
+              </div>
+
+              <form id="bookingForm" class="guest-form">
+                <div class="form-row">
+                  <div class="floating-group">
+                    <input
+                      type="text"
+                      id="firstName"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="firstName">Họ</label>
+                  </div>
+                  <div class="floating-group">
+                    <input type="text" id="lastName" placeholder=" " required />
+                    <label for="lastName">Tên</label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="floating-group">
+                    <input type="email" id="email" placeholder=" " required />
+                    <label for="email">Địa chỉ email</label>
+                  </div>
+                  <div class="floating-group">
+                    <input type="text" id="memberNumber" placeholder=" " />
+                    <label for="memberNumber">Mã hội viên <span class="opt-label">Không bắt buộc</span></label>
+                  </div>
+                </div>
+
+                
+
+                <div class="form-row phone-row">
+                  <div class="floating-group code-group">
+                    <select id="phoneCode">
+                      <option value="+84">(+84) Việt Nam</option>
+                      <option value="+1">(+1) Hoa Kỳ</option>
+                      <option value="+44">(+44) Anh</option>
+                    </select>
+                    <label for="phoneCode">Mã quốc gia</label>
+                  </div>
+                  <div class="floating-group phone-group">
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="phoneNumber">Số điện thoại</label>
+                  </div>
+                </div>
+
+                <p class="form-note small">
+                  Khi cung cấp số điện thoại, quý khách đồng ý để khách sạn liên hệ qua SMS về kỳ lưu trú và các thông tin quan trọng khác.
+                </p>
+
+                <div class="form-row single">
+                  <div class="floating-group">
+                    <select id="country">
+                      <option value="Vietnam">Việt Nam</option>
+                      <option value="USA">Hoa Kỳ</option>
+                      <option value="UK">Vương quốc Anh</option>
+                    </select>
+                    <label for="country">Quốc gia/Khu vực</label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="floating-group">
+                    <input type="text" id="address1" placeholder=" " required />
+                    <label for="address1">Địa chỉ</label>
+                  </div>
+                  <div class="floating-group">
+                    <input type="text" id="address2" placeholder=" " />
+                    <label for="address2">Địa chỉ bổ sung <span class="opt-label">Không bắt buộc</span></label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="floating-group">
+                    <input type="text" id="city" placeholder=" " required />
+                    <label for="city">Thành phố</label>
+                  </div>
+                  <div class="floating-group">
+                    <input type="text" id="province" placeholder=" " required />
+                    <label for="province">Tỉnh/Bang</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="policy-section">
+              <h3 class="policy-title">THÔNG TIN TỪ KHÁCH SẠN</h3>
+              <ul class="policy-list">
+                <li>
+                  Khách sạn tham gia chương trình Check-Out for Children/UNICEF. Quý khách có thể tự nguyện tham gia khi nhận phòng.
+                </li>
+              </ul>
+
+              <h3 class="policy-title margin-top">CHÍNH SÁCH HUỶ PHÒNG</h3>
+              <ul class="policy-list">
+                <li id="cancelPolicyText">
+                  Vui lòng chọn phòng để xem chính sách huỷ.
+                </li>
+              </ul>
+
+              <button type="submit" form="bookingForm" class="btn-book-now">Đặt ngay</button>
+            </div>
+          </div>
+
+          <div class="sidebar-column">
+            <div class="room-summary-card">
+              <div class="card-img-wrap">
+                <img
+                  id="summaryRoomImg"
+                  src="images/deluxe king,guest room,1 king.png"
+                  alt="Ảnh phòng đã chọn"
+                />
+              </div>
+              <div class="card-details">
+                <h3 class="summary-room-title" id="summaryRoomTitle">
+                  —
+                </h3>
+                <a href="room-detail.html" class="details-link" id="summaryDetailsLink" hidden>Chi tiết phòng</a>
+
+                <div class="stay-info">
+                  <p id="summaryStayDates">
+                    —
+                  </p>
+                  <p id="summaryGuests">—</p>
+                  <p class="rate-name" id="summaryRate">Giá linh hoạt</p>
+                  <ul class="service-details" id="summaryServices" hidden></ul>
+                </div>
+
+                <a href="rooms.html" class="edit-stay-link"
+                  ><i class="fa-solid fa-arrow-left"></i> Sửa thông tin lưu trú</a
+                >
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-charge">
+                  <span class="charge-link">Tổng chi phí</span>
+                  <div class="charge-amount">
+                    <span class="amount-val" id="summaryAmount">0.00</span>
+                    <span class="amount-sub" id="summaryCurrencySubtotal"
+                      >USD (tạm tính)</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+<div class="jw-chrome"><footer class="main-dark-footer">
+<div class="footer-hotel-info"><h2>JW MARRIOTT® HOTEL HANOI</h2><div class="info-grid">
+<div class="links-col"><a href="index.html">Tổng quan</a><a href="rooms.html">Phòng</a><a href="room-detail.html?id=deluxe-king">Phòng Deluxe King</a><a href="cuisine.html">Ẩm thực</a><a href="services.html">Dịch vụ &amp; Tiện ích</a><a href="offers.html">Ưu đãi</a></div>
+<div class="links-col"><a href="rooms.html">Đặt phòng ngay</a><a href="history.html">Lịch sử đặt</a><a href="index.html#ban-do">Bản đồ &amp; cách di chuyển</a></div>
+<div class="address-col"><p>SỐ 8 ĐƯỜNG ĐỖ ĐỨC DỤC, PHƯỜNG MỄ TRÌ, QUẬN NAM TỪ LIÊM, HÀ NỘI, VIỆT NAM</p><p>HOTLINE: <a href="tel:+842438335588" style="color:inherit">+84 24 3833 5588</a></p></div></div></div>
+<div class="footer-accordions">
+<div class="acc-item"><button class="acc-head" type="button"><span>Dành cho khách</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="rooms.html">Đặt phòng</a><a href="history.html">Lịch sử đặt</a><a href="cuisine.html">Đặt bàn nhà hàng</a><a href="services.html">Dịch vụ &amp; Tiện ích</a></div></div>
+<div class="acc-item"><button class="acc-head" type="button"><span>Công ty của chúng tôi</span><i class="fa-solid fa-chevron-down"></i></button><div class="acc-panel"><a href="index.html">Về JW Marriott Hotel Hanoi</a><a href="https://www.marriott.com" target="_blank" rel="noopener">Marriott International</a></div></div></div>
+<div class="footer-copyright"><p>© 2026 JW Marriott Hotel Hanoi — Website mô phỏng phục vụ bài tập lớn, không phải trang chính thức của Marriott International.</p></div>
+</footer></div>
+<script src="js/site.js"></script>
+
+
+    <script src="js/checkout.js"></script>
+  </body>
+</html>
